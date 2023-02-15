@@ -1,0 +1,114 @@
+body {
+    background: $primary_color;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 12px;
+
+    button {
+        border: 0;
+        outline: none;
+        background: transparent;
+        z-index: 333;
+        position: relative;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #0f0702a1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 33333;
+    }
+
+    .loading-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    .pop-up {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 100%;
+        z-index: 2222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .pop-up-inner {
+            width: 75%;
+            // background: linear-gradient(#1e224c, #5559a4, #1e224c);
+            // border: 2px solid #5559a4;
+            background: url('../imgs/popup_tit.png') no-repeat center center;
+            background-size: contain;
+            padding: 2em 1em;
+            text-align: center;
+            color: #fff;
+            border-radius: 0.5em;
+        }
+    }
+
+
+
+    .trending-gifts-bg{
+        background: url('../imgs/border-bg.png') repeat center center;
+        background-size: contain;
+        width: 95%;
+        margin: auto;
+        min-height: 20vw;
+        position: relative;
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        &::before{
+            content: "";
+            background: url('../imgs/border-top.png') no-repeat center top;
+            background-size: contain;
+            width: 100%;
+            height: 10vw;
+            top: -8px;
+            position: absolute;
+        }
+        &::after{
+            content: "";
+            background: url('../imgs/border-bottom.png') no-repeat center bottom;
+            background-size: contain;
+            width: 100%;
+            height: 10vw;
+            position: absolute;
+            bottom: -7px;
+
+         }
+    }
+    // =============== footer ============
+.copy-right{
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+}
+
+
+@keyframes scale {
+
+    0% {
+        transform: scale(0);
+    }
+}

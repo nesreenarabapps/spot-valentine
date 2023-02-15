@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<Home  v-if="$store.state.info"/>
+  <div class="loading-page " v-else>
+    <div v-if="!errorMessage" class="spinner-border"></div>
+    <div v-if="!errorMessage">... جارى التحميل</div>
+    <div v-if="errorMessage">{{ errorMessage }}</div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState } from 'vuex'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
+  },
+  computed:{
+...mapState(['errorMessage'])
+  },
+  created(){
+    this.$store.dispatch('getInfoApi')
+    this.$store.dispatch('getInfoSenders')
+    this.$store.dispatch('getInfoReceivers')
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '@/assets/styles/styles.css';
 </style>

@@ -1,0 +1,246 @@
+.home {
+    overflow: hidden;
+    position: relative;
+
+    .fade-enter-from {
+        opacity: 0;
+    }
+
+    .fade-enter-active {
+        transition: all 0.3s ease;
+    }
+
+    .fade-leave-to {
+        opacity: 0;
+    }
+
+    .fade-leave-active {
+        transition: all 0.3s ease;
+    }
+
+    header {
+        background: url('../imgs/header.png') no-repeat center center;
+        background-size: contain;
+        width: 100%;
+        height: 92vw;
+        text-align: center;
+        .header-center-img {
+            background: url('../imgs/header-center.png') no-repeat center center;
+            background-size: contain;
+            width: 100%;
+            height: 25vw;
+            position: absolute;
+            top: 9px;
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 8vw;
+                height: 8vw;
+                object-fit: contain;
+                border-radius: 50%;
+                margin-top: 10px;
+                
+                &.user-senders{
+                    position: absolute;
+                    margin-left: 15%;
+                }
+                &.user-receivers{
+                    position: absolute;
+                    margin-left: -13%;
+                }
+            }
+        }
+    }
+
+    .info-btn {
+        background: url('../imgs/rules-btn.png') no-repeat center right;
+        background-size: contain;
+        width: 20%;
+        height: 12vw;
+        position: absolute;
+        top: 4%;
+        right: 0;
+    }
+
+    .info-img {
+        width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+    }
+
+    // ====== counter ==========
+    .count-down {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            border: 1px solid #e6b680;
+            background: linear-gradient(#ee6270, #f7b2b9, #ee6270);
+            width: 33px;
+            margin: 0 5px;
+            text-align: center;
+            border-radius: 6px;
+        }
+    }
+
+    // ============= Box gifts ===========
+    .box-gifts {
+        width: 90%;
+        height: 165px;
+        margin: 10% auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &::before {
+            content: "";
+            background: url('../imgs/bg_lover.png') no-repeat center top;
+            background-size: 100%;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border: 2px solid #e3b254;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        .gift-decoration {
+            background: url('../imgs/gift-bg.png') no-repeat center center;
+            background-size: contain;
+            width: 20vw;
+            height: 20vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            color: $primary_color;
+            font-weight: 500;
+            position: relative;
+
+            .gift-decoration-img {
+                width: 10vw;
+                height: 10vw;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .gift-decoration-name {
+                font-size: 11px;
+                position: absolute;
+                bottom: -18px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .gift-decoration-score {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                position: absolute;
+                bottom: -36px;
+
+                img {
+                    width: 3vw;
+                    height: 3vw;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    // ============ trending and gifts button  ============ 
+    .change-section-type-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        direction: rtl;
+
+        button {
+            background: url('../imgs/tab_no_active.png') no-repeat center center;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            color: $primary_dark;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 8px;
+
+            &.active {
+                background: url('../imgs/tab_active.png') no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: 20vw;
+        }
+    }
+
+    // =============== senders and receivers button ==========
+    .tabs-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        direction: rtl;
+        width: 80%;
+        margin: auto;
+
+        button {
+            background: url('../imgs/btn-not-active.png') no-repeat center center;
+            background-size: contain;
+
+            &.active {
+                background: url('../imgs/btn-active.png') no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        button {
+            width: 45%;
+            height: 20vw;
+        }
+    }
+
+    // ================= section gifts =============
+    .gifts {
+        width: 95%;
+        margin: auto;
+        z-index: -1;
+        position: relative;
+        padding: 2% 0;
+
+        &::before {
+            content: "";
+            background: url('../imgs/bg_lover.png') no-repeat center center;
+            background-size: contain;
+            width: 100%;
+            height: 103vw;
+            position: absolute;
+            top: -6%;
+            z-index: -1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: scale 400ms ease-in-out;
+        }
+    }
+
+
+}
